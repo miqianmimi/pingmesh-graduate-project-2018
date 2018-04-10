@@ -116,7 +116,7 @@ ax1.set_title('Server{n} cdf'.format(n="10.2.96.51"))
 ecdf=sm.distributions.ECDF(x)
 z=np.linspace(min(x),max(x))
 y=ecdf(z)
-plt.step(z,y,'darkpink')
+plt.step(z,y,'pink')
 
 
 plt.show()
