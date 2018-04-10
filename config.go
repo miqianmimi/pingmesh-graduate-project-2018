@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"log"
 	"os"
 	"sync"
 )
@@ -28,15 +27,15 @@ func (c *Config) Load() {
 	file, err := os.Open("./conf/agent.conf")
 	defer file.Close()
 	if err != nil {
-		log.Fatal("open configuration file failed")
+		Error.Fatal("open configuration file failed", err)
 	}
 	decoder := json.NewDecoder(file)
 	err = decoder.Decode(c)
 	if err != nil {
-		log.Fatal("parse configuration failed")
+		Error.Fatal("parse configuration failed", err)
 	}
 }
 
 func (c *Config) Print() {
-	log.Printf("%#v\n", *c)
+	Info.Printf("%+v\n", *c)
 }
