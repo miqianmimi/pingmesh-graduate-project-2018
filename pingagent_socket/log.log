@@ -1,0 +1,82 @@
+#log of 192.168.2.101
+ =>Client Socket Created
+=>Connecting to Server...
+=> Awaiting confirmation from the server...
+=>Connection confirmed
+
+
+=> Enter # to end the connection
+
+Client: send hello *
+Server: hi received * 
+
+received from 192.168.2.101 at PORT 1235
+SrcIp: ip-192-168-2-100/naddress list: 127.0.1.1/t
+
+1.DistIp: 192.168.2.101
+2.DistPort: 1235
+3.SrcIp:ip-192-168-2-100
+4.SrcPort:1235
+5.ProbingType:tor
+6.Protocol:TCP Socket
+7.MsgLen:13
+8.Timestamp:Sat Apr 14 00:13:29 2018
+9.Rtt:0.000377447
+=>Connection terminated...
+Goodbye
+
+
+ =>Client Socket Created
+=>Connecting to Server...
+=> Awaiting confirmation from the server...
+=>Connection confirmed
+
+
+=> Enter # to end the connection
+
+Client: send hello *
+Server: hi received * 
+
+received from 192.168.2.101 at PORT 1235
+SrcIp: ip-192-168-2-104/naddress list: 127.0.1.1/t
+
+1.DistIp: 192.168.2.101
+2.DistPort: 1235
+3.SrcIp:ip-192-168-2-104
+4.SrcPort:1235
+5.ProbingType:tor
+6.Protocol:TCP Socket
+7.MsgLen:13
+8.Timestamp:Sat Apr 14 00:15:15 2018
+9.Rtt:0.000468773
+=>Connection terminated...
+Goodbye
+
+
+
+ =>Client Socket Created
+=>Connecting to Server...
+=> Awaiting confirmation from the server...
+=>Connection confirmed
+
+
+=> Enter # to end the connection
+
+Client: send hello *
+Server: hi received * 
+
+received from 192.168.2.101 at PORT 1235
+SrcIp: ip-192-168-2-202.local/naddress list: 192.168.2.202/t
+
+1.DistIp: 192.168.2.101
+2.DistPort: 1235
+3.SrcIp:ip-192-168-2-202.local
+4.SrcPort:1235
+5.ProbingType:tor
+6.Protocol:TCP Socket
+7.MsgLen:13
+8.Timestamp:Sat Apr 14 00:18:49 2018
+9.Rtt:0.000704254
+=>Connection terminated...
+Goodbye
+
