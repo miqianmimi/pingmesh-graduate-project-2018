@@ -1,0 +1,84 @@
+using enp1s0f0, addr: 192.168.2.101, MTU: 1500
+HPING 192.168.2.100 (enp1s0f0 192.168.2.100): NO FLAGS are set, 40 headers + 0 data bytes
+len=46 ip=192.168.2.100 ttl=64 DF id=12297 tos=0 iplen=40
+sport=0 flags=RA seq=0 win=0 rtt=3.9 ms
+seq=0 ack=1200955593 sum=73b6 urp=0
+
+len=46 ip=192.168.2.100 ttl=64 DF id=12298 tos=0 iplen=40
+sport=0 flags=RA seq=1 win=0 rtt=2.9 ms
+seq=0 ack=353642741 sum=c7e0 urp=0
+
+len=46 ip=192.168.2.100 ttl=64 DF id=12299 tos=0 iplen=40
+sport=0 flags=RA seq=2 win=0 rtt=1.9 ms
+seq=0 ack=501031671 sum=fbdd urp=0
+
+len=46 ip=192.168.2.100 ttl=64 DF id=12300 tos=0 iplen=40
+sport=0 flags=RA seq=3 win=0 rtt=0.9 ms
+seq=0 ack=1752520226 sum=3760 urp=0
+
+
+--- 192.168.2.100 hping statistic ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max = 0.9/2.4/3.9 ms
+
+
+using enp1s0f0, addr: 192.168.2.101, MTU: 1500
+HPING 192.168.2.101 (enp1s0f0 192.168.2.101): NO FLAGS are set, 40 headers + 0 data bytes
+
+--- 192.168.2.101 hping statistic ---
+4 packets transmitted, 0 packets received, 100% packet loss
+round-trip min/avg/max = 0.0/0.0/0.0 ms
+
+
+
+using enp1s0f0, addr: 192.168.2.101, MTU: 1500
+HPING 192.168.2.202 (enp1s0f0 192.168.2.202): NO FLAGS are set, 40 headers + 0 data bytes
+len=46 ip=192.168.2.202 ttl=64 DF id=8510 tos=0 iplen=40
+sport=0 flags=RA seq=0 win=0 rtt=3.9 ms
+seq=0 ack=1299143739 sum=9574 urp=0
+
+len=46 ip=192.168.2.202 ttl=64 DF id=8511 tos=0 iplen=40
+sport=0 flags=RA seq=1 win=0 rtt=2.9 ms
+seq=0 ack=1942707672 sum=9b4c urp=0
+
+len=46 ip=192.168.2.202 ttl=64 DF id=8512 tos=0 iplen=40
+sport=0 flags=RA seq=2 win=0 rtt=1.9 ms
+seq=0 ack=107140856 sum=e340 urp=0
+
+len=46 ip=192.168.2.202 ttl=64 DF id=8513 tos=0 iplen=40
+sport=0 flags=RA seq=3 win=0 rtt=0.9 ms
+seq=0 ack=1837899817 sum=8790 urp=0
+
+
+--- 192.168.2.202 hping statistic ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max = 0.9/2.4/3.9 ms
+
+
+----------------------------------
+HPING 192.168.2.100 (enp1s0f0 192.168.2.100): NO FLAGS are set, 40 headers + 0 data bytes
+len=46 ip=192.168.2.100 ttl=64 DF id=12882 sport=0 flags=RA seq=0 win=0 rtt=3.9 ms
+len=46 ip=192.168.2.100 ttl=64 DF id=12883 sport=0 flags=RA seq=1 win=0 rtt=2.9 ms
+len=46 ip=192.168.2.100 ttl=64 DF id=12884 sport=0 flags=RA seq=2 win=0 rtt=1.8 ms
+len=46 ip=192.168.2.100 ttl=64 DF id=12885 sport=0 flags=RA seq=3 win=0 rtt=0.8 ms
+
+--- 192.168.2.100 hping statistic ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max = 0.8/2.3/3.9 ms
+
+HPING 192.168.2.101 (enp1s0f0 192.168.2.101): NO FLAGS are set, 40 headers + 0 data bytes
+
+--- 192.168.2.101 hping statistic ---
+4 packets transmitted, 0 packets received, 100% packet loss
+round-trip min/avg/max = 0.0/0.0/0.0 ms
+
+
+HPING 192.168.2.202 (enp1s0f0 192.168.2.202): NO FLAGS are set, 40 headers + 0 data bytes
+len=46 ip=192.168.2.202 ttl=64 DF id=11638 sport=0 flags=RA seq=0 win=0 rtt=3.9 ms
+len=46 ip=192.168.2.202 ttl=64 DF id=11639 sport=0 flags=RA seq=1 win=0 rtt=2.9 ms
+len=46 ip=192.168.2.202 ttl=64 DF id=11640 sport=0 flags=RA seq=2 win=0 rtt=1.9 ms
+len=46 ip=192.168.2.202 ttl=64 DF id=11641 sport=0 flags=RA seq=3 win=0 rtt=0.9 ms
+
+--- 192.168.2.202 hping statistic ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max = 0.9/2.4/3.9 ms

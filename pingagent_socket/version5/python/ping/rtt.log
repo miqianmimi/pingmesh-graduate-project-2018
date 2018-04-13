@@ -1,0 +1,32 @@
+PING 192.168.2.100 (192.168.2.100) 56(84) bytes of data.
+
+--- 192.168.2.100 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 1998ms
+rtt min/avg/max/mdev = 0.134/0.171/0.213/0.034 ms
+PING 192.168.2.101 (192.168.2.101) 56(84) bytes of data.
+
+--- 192.168.2.101 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 1998ms
+rtt min/avg/max/mdev = 0.013/0.019/0.028/0.008 ms
+PING 192.168.2.202 (192.168.2.202) 56(84) bytes of data.
+
+--- 192.168.2.202 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 1998ms
+rtt min/avg/max/mdev = 0.164/0.173/0.185/0.008 ms
+
+PING 192.168.2.100 (192.168.2.100) 63000(63028) bytes of data.
+
+--- 192.168.2.100 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 1.238/1.250/1.271/0.043 ms
+PING 192.168.2.101 (192.168.2.101) 63000(63028) bytes of data.
+
+--- 192.168.2.101 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 1998ms
+rtt min/avg/max/mdev = 0.039/0.042/0.050/0.009 ms
+PING 192.168.2.202 (192.168.2.202) 63000(63028) bytes of data.
+
+--- 192.168.2.202 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 1.305/1.354/1.418/0.055 ms
+

@@ -1,0 +1,2 @@
+python hping.py >rtt1.log
+scp rtt1.log yiqing@192.168.2.254:~

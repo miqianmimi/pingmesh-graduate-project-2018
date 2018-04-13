@@ -1,0 +1,9 @@
+chmod a+x /pingnc.sh
+/pingnc.sh
+
+
+到三个client服务器里面
+
+nc -l 1234
+nc -l 1235
+nc -l -p 1236
