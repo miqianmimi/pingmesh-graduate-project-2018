@@ -1,5 +1,6 @@
 # Pingmesh reimplementation
-author:yiqingma
+Author: Yiqing Ma
+
 ## Log format
 The log file consist of many lines, each line in log file is a json object and is formatted like below
 ```json
@@ -13,11 +14,11 @@ For example
 ```
 
 ### 2018/04/10:
-* visualize -> 2.0 [data generate and picture generate](new_python_generate_V2.0.py), [latency cdf and server picture](pingmesh.png)
+* visualize -> 2.0 [data generate and picture generate](/vis/new_python_generate_V2.0.py), [latency cdf and server picture](/vis/pingmesh.png)
 
 
 ### 2018/04/11:
-* pingagent -> 1.0 [socket server client ping each other on localhost](client.cpp), my first c++ ⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄
+* pingagent -> 1.0 [socket server client ping each other on localhost](/pingagent_socket/version1/client.cpp), my first c++ ⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄
 
 ### 2018/04/12:
 * pingagent.socket 
