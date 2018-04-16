@@ -30,3 +30,11 @@ For example
 * pingagent.socket
 * ->[version4 服务器1v1自动保存日志](/pingagent_socket/version4/)
 * ->[version5 shell自动打印ping的rtt: nc ping hping](/pingagent_socket/version5/)
+
+### 2018/04/13:
+* pingagent.socket
+* ->[version6 shell 自动获取日志](/pingagent_socket/version6/)
+* ->[version7 得到json日志](/pingagent_socket/version7/)
+* ->[version8 服务器1vn 多链接](/pingagent_socket/version8/)
+* ->[version9 服务器1vn 保存json日志](/pingagent_socket/version9/)
+* ->[version10 服务器1vn 3s请求自动发送 保存日志](/pingagent_socket/version10/)
