@@ -38,3 +38,7 @@ For example
 * ->[version8 服务器1vn 多链接](/pingagent_socket/version8/)
 * ->[version9 服务器1vn 保存json日志](/pingagent_socket/version9/)
 * ->[version10 服务器1vn 3s请求自动发送 保存日志](/pingagent_socket/version10/)
+
+### 2018/04/13:
+* pingagent.socket
+* ->[version11 完成一个shell 在服务器后台运行一次 一体化保存数据](/pingagent_socket/version11/)
