@@ -13,8 +13,20 @@ For example
 {"Host":"10.2.96.52","Timestamp":1523263582123455,"Num":1,"Entries":[[1523263580577353,"10.2.96.52",33333,"10.2.96.50",44444,"tcp","tor",1024,199,0]]}
 ```
 
+# 毕设参考文档及每日进展：
+
 ### 2018/04/10:
 * visualize -> 2.0 [data generate and picture generate](/vis/new_python_generate_V2.0.py), [latency cdf and server picture](/vis/pingmesh.png)
+| Date        
+| :---         
+|  0.定义数据格式Log           
+|  1.实现python pingmesh10v10可视化 +latency cdf图
+|  2.实现Python pingmesh40V40可视化
+|  3.构造自动生成数据程序
+
+[✅latency可视化](https://queue.acm.org/detail.cfm?id=1809426）
+[✅Seaborn教程](https://python-graph-gallery.com/91-customize-seaborn-heatmap/ )
+[✅Seaborn颜色调整](https://seaborn.pydata.org/tutorial/color_palettes.html#building-color-palettes)
 
 
 ### 2018/04/11:
