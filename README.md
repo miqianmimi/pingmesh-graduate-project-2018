@@ -130,3 +130,21 @@ For example
 | 3 | 写clear.sh，调出2个bug |
 
 [✅python解析json文件](https://zhuanlan.zhihu.com/p/27917664)
+
+
+# 第一版demo的操作指南
+
+* 准备部分：
+需要的文件在version12里面：bb.sh(main); clear.sh; s12.cpp; c12.cpp ;vis.py
+
+* 代码部分：
+```
+ssh yiqing@192.168.2.254
+cd pingmesh/v11
+#把这些文件全部放到v11内
+mkdir 100
+mkdir 101
+#跑主程序
+bash bb.sh
+得到实时的ping的值，输入绘图参数，得到热力图和Latency_cdf结果 
+```
