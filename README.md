@@ -3,7 +3,7 @@ Author: Yiqing Ma
 //
 Idea from: [郭传雄](https://www.youtube.com/watch?v=qPkQSH1iNqc) SIGCOMM
 
-***✅的表示参考文档，表格内是进展，星号后表示代码更新处 ***
+✅的表示参考文档，表格内是进展，星号后表示代码更新处 
 
 ## Log format
 The log file consist of many lines, each line in log file is a json object and is formatted like below
