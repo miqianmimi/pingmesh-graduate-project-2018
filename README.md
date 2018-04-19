@@ -90,10 +90,43 @@ For example
 * ->[version9 服务器1vn 保存json日志](/pingagent_socket/version9/)
 * ->[version10 服务器1vn 3s请求自动发送 保存日志](/pingagent_socket/version10/)
 
+| Series | Done | 
+| :--- | :---- | 
+| 1 | json格式输出   |
+| 2    | 改成:server ping 多次 client 多次 fork   |
+| 3 | 改成文件储存版本，并且存到server端 |
+| 4 |设定时间3S一发送 |
+
+[✅C语言语法](https://www.kancloud.cn/digest/clearning/149690)
+[✅Tcp server 1ping n client](https://blog.csdn.net/shine_journey/article/details/72641313)
+
+
 ### 2018/04/17:
 * pingagent.socket
 * ->[version11 完成一个shell 在服务器后台运行一次 一体化保存数据](/pingagent_socket/version11/)
 
+| Series | Done | 
+| :--- | :---- | 
+| 1 | expect 和 spawn 和 key-generate 免除钥匙自动登录   |
+| 2 | &实现后台操作的shell  |
+| 3 | shell自动化操作 |
+
+[✅如何写shell并行所有程序](https://www.zhihu.com/question/53122087)
+[✅shell登录多台服务器](http://www.jb51.net/article/34250.htm)
+[✅免密码](配置公共钥匙 https://broqiang.com/posts/30)
+[✅自动输入密码](https://blog.csdn.net/zhangjikuan/article/details/51105166)
+[✅expect 和 spawn自动登录](https://blog.csdn.net/donglynn/article/details/51536212)
+[✅伪终端](http://www.cnblogs.com/wangcp-2014/p/6691445.html)
+[✅argv](https://blog.csdn.net/eastmount/article/details/20413773)
+
 ### 2018/04/19:
 * pingagent.socket
 * ->[version12 初始demo完成,shell联通,C++PING,python画图一体化，以两个server为例](/pingagent_socket/version12/)
+
+| Series | Done | 
+| :--- | :---- | 
+| 1 | 初始demo,shell读数据C++PING,python画图一体化，以两个server为例   |
+| 2 | 读出文件到python;用json画图 |
+| 3 | 写了clear.sh，调出了不对等的bug |
+
+[✅python解析json文件](https://zhuanlan.zhihu.com/p/27917664)
