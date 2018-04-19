@@ -1,7 +1,9 @@
 # Pingmesh reimplementation
 Author: Yiqing Ma
 //
-Founder: [郭传雄](https://www.youtube.com/watch?v=qPkQSH1iNqc)
+Idea from: [郭传雄](https://www.youtube.com/watch?v=qPkQSH1iNqc) SIGCOMM
+
+***✅的表示参考文档，表格内是进展，/*号后表示代码更新处 ***
 
 ## Log format
 The log file consist of many lines, each line in log file is a json object and is formatted like below
@@ -147,3 +149,4 @@ mkdir 100
 mkdir 101
 bash bb.sh
 ```
+[✅经典必看 socket有关的编程项目](https://notes.shichao.io/unp/)
