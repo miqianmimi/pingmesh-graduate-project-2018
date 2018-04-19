@@ -13,7 +13,7 @@ For example
 {"Host":"10.2.96.52","Timestamp":1523263582123455,"Num":1,"Entries":[[1523263580577353,"10.2.96.52",33333,"10.2.96.50",44444,"tcp","tor",1024,199,0]]}
 ```
 
-# 毕设参考文档及每日进展：
+## 毕设参考文档及每日进展：
 
 ### 2018/04/10:
 * visualize -> 2.0 [data generate and picture generate](/vis/new_python_generate_V2.0.py), [latency cdf and server picture](/vis/pingmesh.png)
@@ -132,7 +132,7 @@ For example
 [✅python解析json文件](https://zhuanlan.zhihu.com/p/27917664)
 
 
-# 第一版demo的操作指南
+## 第一版demo的操作指南
 
 * 准备部分：
 需要的文件在version12里面：bb.sh(main); clear.sh; s12.cpp; c12.cpp ;vis.py
