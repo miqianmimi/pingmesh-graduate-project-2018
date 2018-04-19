@@ -26,8 +26,10 @@ For example
 
 | left | center | right |
 | :--- | :----: | ----: |
-| aaaa | bbbbbb | ccccc |
-| a    | b      | c     |
+| 1 | bbbbbb | ccccc |
+| 2    | b      | c     |
+| 3 | bbbbbb | ccccc |
+| 4 | bbbbbb | ccccc |
 
 [✅latency可视化](https://queue.acm.org/detail.cfm?id=1809426)
 [✅Seaborn教程](https://python-graph-gallery.com/91-customize-seaborn-heatmap/ )
