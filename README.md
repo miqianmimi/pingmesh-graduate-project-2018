@@ -1,5 +1,6 @@
 # Pingmesh reimplementation
 Author: Yiqing Ma
+Founder: [郭传雄](https://www.youtube.com/watch?v=qPkQSH1iNqc)
 
 ## Log format
 The log file consist of many lines, each line in log file is a json object and is formatted like below
