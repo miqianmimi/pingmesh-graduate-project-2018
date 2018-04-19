@@ -19,7 +19,7 @@ For example
 * visualize -> 2.0 [data generate and picture generate](/vis/new_python_generate_V2.0.py), [latency cdf and server picture](/vis/pingmesh.png)
 
 | Series | Done | 
-| :--- | :----: | 
+| :--- | :---- | 
 | 1 |定义数据格式Log   |
 | 2    | 实现python pingmesh10v10可视化 +latency cdf图     |
 | 3 | 实现Python pingmesh40V40可视化        |
@@ -32,6 +32,15 @@ For example
 
 ### 2018/04/11:
 * pingagent -> 1.0 [socket server client ping each other on localhost](/pingagent_socket/version1/client.cpp), my first c++ ⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄
+| Series | Done | 
+| :--- | :---- | 
+| 1 |第一个C++程序   |
+| 2    | 实现socket 简易版通讯     |
+| 3 | 实现socket 人机交互版通讯   |
+[✅如何写Ping程序](https://blog.csdn.net/appleyuchi/article/details/78123752)
+[✅Socket c++](http://c.biancheng.net/cpp/html/3029.html)
+
+
 
 ### 2018/04/12:
 * pingagent.socket 
