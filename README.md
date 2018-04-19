@@ -113,7 +113,7 @@ For example
 
 [✅如何写shell并行所有程序](https://www.zhihu.com/question/53122087)
 [✅shell登录多台服务器](http://www.jb51.net/article/34250.htm)
-[✅免密码](配置公共钥匙 https://broqiang.com/posts/30)
+[✅免密码配置公共钥匙]( https://broqiang.com/posts/30)
 [✅自动输入密码](https://blog.csdn.net/zhangjikuan/article/details/51105166)
 [✅expect 和 spawn自动登录](https://blog.csdn.net/donglynn/article/details/51536212)
 [✅伪终端](http://www.cnblogs.com/wangcp-2014/p/6691445.html)
@@ -126,7 +126,7 @@ For example
 | Series | Done | 
 | :--- | :---- | 
 | 1 | 初始demo,shell读数据C++PING,python画图一体化，以两个server为例   |
-| 2 | 读出文件到python;用json画图 |
-| 3 | 写了clear.sh，调出了不对等的bug |
+| 2 | 读文件到python;用json画图 |
+| 3 | 写clear.sh，调出2个bug |
 
 [✅python解析json文件](https://zhuanlan.zhihu.com/p/27917664)
