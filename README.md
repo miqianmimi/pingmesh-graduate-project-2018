@@ -17,19 +17,13 @@ For example
 
 ### 2018/04/10:
 * visualize -> 2.0 [data generate and picture generate](/vis/new_python_generate_V2.0.py), [latency cdf and server picture](/vis/pingmesh.png)
-|  Series | Done                                          |
-| :-----: | :-------------------------------------------: |
-| 1.      | 定义数据格式Log                                 |
-| 2.      | 实现python pingmesh10v10可视化 +latency cdf图   |
-| 3.      | 实现Python pingmesh40V40可视化                  |
-| 4.      | 构造自动生成数据程序                             |
 
-| left | center | right |
-| :--- | :----: | ----: |
-| 1 | bbbbbb | ccccc |
-| 2    | b      | c     |
-| 3 | bbbbbb | ccccc |
-| 4 | bbbbbb | ccccc |
+| Series | Done | 
+| :--- | :----: | 
+| 1 |定义数据格式Log   |
+| 2    | 实现python pingmesh10v10可视化 +latency cdf图     |
+| 3 | 实现Python pingmesh40V40可视化        |
+| 4 |构造自动生成数据程序          |
 
 [✅latency可视化](https://queue.acm.org/detail.cfm?id=1809426)
 [✅Seaborn教程](https://python-graph-gallery.com/91-customize-seaborn-heatmap/ )
