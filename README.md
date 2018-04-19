@@ -50,10 +50,37 @@ For example
 *  ->[version2 自动1V1服务器](/pingagent_socket/version2/)
 *  ->[version3 服务器1V1自动计时打印IP](/pingagent_socket/version3/)
 
+| Series | Done | 
+| :--- | :---- | 
+| 1 | 实现Server加个time的ping    |
+| 2    | 实现两台服务器之间的ping     |
+| 3 | 实现自动计时  |
+| 4 | 得到log数据  |
+
+[✅服务器配置](https://github.com/HKUST-SING/Equipment-SINGLab)
+[✅两台服务器上ping](https://blog.csdn.net/u011353822/article/details/39370849)
+[✅不同的服务器之间的跳转](http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/scp.html)
+[✅socket+linux](https://www.kancloud.cn/wizardforcel/linux-c-book/134964)
+
+
 ### 2018/04/13:
 * pingagent.socket
 * ->[version4 服务器1v1自动保存日志](/pingagent_socket/version4/)
 * ->[version5 shell自动打印ping的rtt: nc ping hping](/pingagent_socket/version5/)
+
+| Series | Done | 
+| :--- | :---- | 
+| 1 | 完成log输出 Timestamp, SrcIP, SrcPort, DstIP, DstPort, Protocol, ProbingType, MsgLen, RTT, ErrCode   |
+| 2    | 完成shell脚本/python模拟shell脚本，记录nc,ping的时间，得到baseline   |
+| 3 | 参考goaccess做log文档直接分析可视化监控  |
+
+[✅重要APUE.16 chapter](http://www.cnblogs.com/0xcafebabe/p/4478824.html)
+[✅改用输出到printf](https://blog.csdn.net/u010368556/article/details/79182521)
+[✅重要ping;nc文档](http://dbaplus.cn/blog-57-680-1.html)
+[✅linux net 命令大全(好东西)](https://linux.cn/article-5461-1.html)
+[✅Goaccess](https://goaccess.io/download#distro)
+[✅nc命令构造http请求;重要](https://www.jianshu.com/p/84c374c48837)
+
 
 ### 2018/04/16:
 * pingagent.socket
