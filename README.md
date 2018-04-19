@@ -137,14 +137,11 @@ For example
 * 准备部分：
 需要的文件在version12里面：bb.sh(main); clear.sh; s12.cpp; c12.cpp ;vis.py
 
-* 代码部分：
+* 代码部分：把这些文件全部放到v11内,运行下面部分代码，可以得到实时的ping的值，输入绘图参数，得到热力图和Latency_cdf结果 
 ```
 ssh yiqing@192.168.2.254
 cd pingmesh/v11
-#把这些文件全部放到v11内
 mkdir 100
 mkdir 101
-#跑主程序
 bash bb.sh
-得到实时的ping的值，输入绘图参数，得到热力图和Latency_cdf结果 
 ```
