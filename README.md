@@ -151,3 +151,37 @@ bash bb.sh
 ```
 [✅APUE](http://www.apuebook.com/)
 [✅经典必看 socket有关的编程项目](https://notes.shichao.io/unp/)
+
+### 2018/04/21:
+* pingagent.socket
+* ->[version13 修改为多个server](/pingagent_socket/version13/)
+| Series | Done | 
+| :--- | :---- | 
+| 1 | 添加clearmy.sh，实现pingmesh之后复原工作 |
+| 2 | 添加automatickey.sh，实现pingmesh自动配网关到服务器之间秘钥 |
+
+
+### 2018/04/23:
+* pingagent.socket
+* ->[version14 修改为任意n*nserver之间的pingmesh系统](/pingagent_socket/version13/)
+| Series | Done | 
+| :--- | :---- | 
+| 1 | 第二版demo,shell读数据，clean，key作用，C++PING,python画图一体化，以两个server为例|
+| 2 | 后台双向并行，使得同时获得同一时刻所有数据 |
+| 3 | 根据pinglist中server个数，自动实现获取服务器两两ping的数据 |
+
+[✅Linux如何读取文件保存到数组](https://fukun.org/archives/01282174.html)
+
+## 第二版demo的操作指南
+
+* 准备部分：
+需要的文件在version13里面：main.sh; clearmy.sh;
+
+* 代码部分：把这些文件全部放到v13内,运行下面部分代码，可以得到实时的ping的值 
+```
+ssh yiqing@143.89.191.114
+cd pingmesh
+bash main.sh
+每次运行完毕后需要
+bash clearmy.sh
+```
