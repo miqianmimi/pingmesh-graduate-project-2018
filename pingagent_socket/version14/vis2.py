@@ -100,7 +100,7 @@ b = df.pivot('server', 'client', 'rtt')
 print(b)
 
 plt.figure(str(j)+"pingmesh")
-ax = plt.subplot(2, 1, 1)
+ax = plt.subplot(3, 3, 1)
 # cmap = sns.cubehelix_palette(start = 1, rot = 3, gamma=0.8, as_cmap = True)
 # vmin=0,vmax=40,robust=True
 # YlGnBu
@@ -130,33 +130,28 @@ ax.set_ylabel('Client_name')
 
 
 # Second cdf;pdf
+a=open('pinglist.txt')
+for l in range(mmm):
+    awk=SERVER[l][0]
+    t=[]
+    name=[]
+    for ii in range(len(SERVER)):
+        for jj in range(len(SERVER[0])):
+            print(SERVER[ii][jj] == awk)
+            if SERVER[ii][jj] == awk:
+                t.append(RTT[ii][jj]*100000)
+                name.append(CLIENT[ii][jj])
+    print(t)
+    print(len(t))
 
+    x=t
+    ax1 = plt.subplot(3,3, 2+l)
+    ax1.hist(x, 20, normed=1, histtype='bar', facecolor='lightblue', alpha=0.5, rwidth=1, cumulative=True)
+    ax1.set_title('Server{n} cdf'.format(n=str(awk)))
+    ecdf = sm.distributions.ECDF(x)
+    z = np.linspace(min(x), max(x))
+    y = ecdf(z)
+    plt.step(z, y, 'lightpink')
 
-awk=int(input("请输入你想要的服务器的RTT图的序号序号:Choose From" +str(NEWSERVER[0])+","+str(NEWSERVER[mmm-1])+","+str(NEWSERVER[2*mmm-2])+","+str(NEWSERVER[3*mmm-3])+","+str(NEWSERVER[4*mmm-4])+","+str(NEWSERVER[5*mmm-5])+","+str(NEWSERVER[6*mmm-6])+","+str(NEWSERVER[7*mmm-7])+":   "))
-t=[]
-name=[]
-for ii in range(len(SERVER)):
-    for jj in range(len(SERVER[0])):
-        print(SERVER[ii][jj])
-        if SERVER[ii][jj] == "192.168.1."+str(awk):
-            t.append(RTT[ii][jj]*100000)
-            name.append(CLIENT[ii][jj])
-
-
-print(t)
-
-
-x = t
-ax0 = plt.subplot(3, 2, 5)
-ax0.hist(x, 20, normed=1, histtype='bar', facecolor='pink', alpha=0.6)
-ax0.set_title('Server{n} pdf'.format(n=str('192.168.1.'+str(awk))))
-ax1 = plt.subplot(3, 2, 6)
-ax1.hist(x, 20, normed=1, histtype='bar', facecolor='lightblue', alpha=0.5, rwidth=1, cumulative=True)
-ax1.set_title('Server{n} cdf'.format(n=str('192.168.1.'+str(awk))))
-ecdf = sm.distributions.ECDF(x)
-z = np.linspace(min(x), max(x))
-y = ecdf(z)
-plt.step(z, y, 'lightpink')
 plt.show()
-
 
