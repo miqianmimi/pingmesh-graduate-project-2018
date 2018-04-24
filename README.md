@@ -164,7 +164,7 @@ bash bb.sh
 
 ### 2018/04/23:
 * pingagent.socket
-* ->[version14 修改为任意n*nserver之间的pingmesh系统](/pingagent_socket/version14/)
+* ->[version14 修改为任意n\*nserver之间的pingmesh系统](/pingagent_socket/version14/)
 
 | Series | Done | 
 | :--- | :---- | 
@@ -187,3 +187,23 @@ bash main.sh
 每次运行完毕后需要
 bash clearmy.sh
 ```
+
+* 结构图：
+![Structure](https://drive.google.com/open?id=1YZ9nDOt90TuuAgRNdN-HyQ-wrAqGsqdF)
+* 包含文件内容图
+![Contain](https://drive.google.com/open?id=1AMofM8otmJ1BJoBNdkQoHpsswmnUIpBs)
+
+
+### 2018/04/24:
+* pingagent.socket
+* ->[version14 配合画图实现一体化 N SERVER PING RESULT ](/pingagent_socket/version14/)
+
+| Series | Done | 
+| :--- | :---- | 
+| 1 |  8*8 服务器server client； 4个Timestamp图 |
+| 2 |  Python采用automatic动图；能够生成不同timestamp下的图  |
+| 3 |  完成毕设中期进展，中期答辩PPT，demo2， 结构图，待提高  |
+
+[✅python动图](https://zhuanlan.zhihu.com/p/31323002)
+* 待提高点：
+![Imrovement](https://drive.google.com/open?id=1086UsRfnuDMKINdOR24nqxOta_PoW608)
