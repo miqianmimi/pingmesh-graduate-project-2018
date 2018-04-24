@@ -189,9 +189,9 @@ bash clearmy.sh
 ```
 
 * 结构图：
-![Structure](https://drive.google.com/open?id=1YZ9nDOt90TuuAgRNdN-HyQ-wrAqGsqdF)
+![Structure](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/schedule/%E7%BB%93%E6%9E%84%E5%9B%BE.png)
 * 包含文件内容图
-![Contain](https://drive.google.com/open?id=1AMofM8otmJ1BJoBNdkQoHpsswmnUIpBs)
+![Contain](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/schedule/%E6%89%80%E5%90%AB%E5%86%85%E5%AE%B9%E6%96%87%E4%BB%B6%E5%9B%BE.png)
 
 
 ### 2018/04/24:
@@ -206,4 +206,4 @@ bash clearmy.sh
 
 [✅python动图](https://zhuanlan.zhihu.com/p/31323002)
 * 待提高点：
-![Imrovement](https://drive.google.com/open?id=1086UsRfnuDMKINdOR24nqxOta_PoW608)
+![Imrovement](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/schedule/%E5%BE%85%E6%8F%90%E9%AB%98.png)
