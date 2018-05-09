@@ -207,3 +207,6 @@ bash clearmy.sh
 [✅python动图](https://zhuanlan.zhihu.com/p/31323002)
 * 待提高点：
 ![Imrovement](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/schedule/%E5%BE%85%E6%8F%90%E9%AB%98.png)
+
+### 2018/05/09:
+My pingmesh visualization is super ugly. Today gonna change its destiny
