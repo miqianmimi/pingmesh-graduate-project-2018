@@ -106,8 +106,7 @@ For example
 
 
 ### 2018/04/17:
-* pingagent.socket
-* ->[version11 完成一个shell 在服务器后台运行一次 一体化保存数据](/pingagent_socket/version11/)
+* pingagent.socket->[version11 完成一个shell 在服务器后台运行一次 一体化保存数据](/pingagent_socket/version11/)
 
 | Series | Done | 
 | :--- | :---- | 
@@ -124,8 +123,7 @@ For example
 [✅argv](https://blog.csdn.net/eastmount/article/details/20413773)
 
 ### 2018/04/19:
-* pingagent.socket
-* ->[version12 初始demo完成,shell联通,C++PING,python画图一体化，以两个server为例](/pingagent_socket/version12/)
+* pingagent.socket->[version12 初始demo完成,shell联通,C++PING,python画图一体化，以两个server为例](/pingagent_socket/version12/)
 
 | Series | Done | 
 | :--- | :---- | 
@@ -153,8 +151,7 @@ bash bb.sh
 [✅经典必看 socket有关的编程项目](https://notes.shichao.io/unp/)
 
 ### 2018/04/21:
-* pingagent.socket
-* ->[version13 修改为多个server](/pingagent_socket/version13/)
+* pingagent.socket->[version13 修改为多个server](/pingagent_socket/version13/)
 
 | Series | Done | 
 | :--- | :---- | 
@@ -163,8 +160,7 @@ bash bb.sh
 
 
 ### 2018/04/23:
-* pingagent.socket
-* ->[version14 修改为任意n\*nserver之间的pingmesh系统](/pingagent_socket/version14/)
+* pingagent.socket->[version14 修改为任意n\*nserver之间的pingmesh系统](/pingagent_socket/version14/)
 
 | Series | Done | 
 | :--- | :---- | 
@@ -195,8 +191,7 @@ bash clearmy.sh
 
 
 ### 2018/04/24:
-* pingagent.socket
-* ->[version14 配合画图实现一体化 N SERVER PING RESULT ](/pingagent_socket/version14/)
+* pingagent.socket ->[version14 配合画图实现一体化 N SERVER PING RESULT ](/pingagent_socket/version14/)
 
 | Series | Done | 
 | :--- | :---- | 
