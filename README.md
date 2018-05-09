@@ -217,5 +217,8 @@ bash clearmy.sh
 | 1 | 将vis改成html形式，Echarts添加服务器真实数据，画好heatmap |
 
 [✅Echarts学习] (http://echarts.baidu.com/echarts2/doc/start.html)
+
 [✅Echarts-TIMELINE] (http://www.echartsjs.com/gallery/editor.html?c=scatter-life-expectancy-timeline)
+
 [✅javascript 输出数据](http://www.runoob.com/js/js-output.html)
+
