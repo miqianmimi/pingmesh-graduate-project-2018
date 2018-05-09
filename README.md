@@ -204,8 +204,7 @@ bash clearmy.sh
 ![Imrovement](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/schedule/%E5%BE%85%E6%8F%90%E9%AB%98.png)
 
 ### 2018/05/09:
-* pingagent.socket
-* ->[version15 将vis改成Echarts网页版 ](/pingagent_socket/version15/)
+* pingagent.socket ->[version15 将vis改成Echarts网页版 ](/pingagent_socket/version15/)
 
 | Series | Done | 
 | :--- | :---- | 
