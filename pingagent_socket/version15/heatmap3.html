@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%"></div>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+       <script src="file:///tmp/server.json"></script>
+       <script src="file:///tmp/data.json"></script>
+       <script src="file:///tmp/timestamp.json"></script>
+       <script type="text/javascript">
+
+
+
+
+alert("Pingmesh Visualize")
+
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+
+option = null;
+app.title = 'Pingmesh热力图';
+
+
+//1·横纵坐标
+var hours=new Array()
+for (var i=0;i<server['server'][0].length;i++)
+{
+  hours[i] = server['server'][0][i]
+}
+//var hours = server['server'];
+        //['12a', '1a', '2a', '3a', '4a', '5a', '6a',
+        //'7a', '8a', '9a','10a','11a',
+        //'12p', '1p', '2p', '3p', '4p', '5p',
+        //'6p', '7p', '8p', '9p', '10p', '11p'];
+var days = new Array()
+for (var i=0;i<server['server'][0].length;i++)
+{
+  days[i] = server['server'][0][i]
+}
+        //['Saturday', 'Friday', 'Thursday',
+        //'Wednesday', 'Tuesday', 'Monday', 'Sunday'];
+
+
+
+//3·timestamp
+var time = new Array()
+for (var i=0;i<timestamp['timestamp'][0].length;i++)
+{
+  time[i] = timestamp['timestamp'][0][i]
+} 
+
+
+//2·data热力图值
+var data = data['data']
+for (var i=0;i<data.length;i++)
+{
+    data[i] = data[i].map(function (item) {
+      return [item[0], item[1], item[2] || '-'];
+    });
+} 
+
+
+
+var schema = [                                           //4.modest 标注
+    {name: 'Server', index: 0, text: 'Server', unit: ' 号服务器'}, 
+    {name: 'Client', index: 1, text: 'Client', unit: ' 号服务器'},
+    {name: 'Latency Time', index: 2, text: 'Latency', unit: ' 微秒'},
+    {name: 'Pingmesh', index: 3, text:'Pingmesh', unit: ' 信息'}
+];
+
+ option = {
+    baseOption:{
+        timeline: {
+            color : '#aaa',
+            show : true,
+            axisType: 'category',
+            orient: 'vertical',
+            autoPlay: false,
+            inverse: true,
+            playInterval: 1000,
+            right: 70,
+            top: 30,
+            bottom: 100,
+            width: 55,
+            label: {
+                normal: {
+                    rotate:25,
+
+                    fontSize:13,
+                    textStyle: {
+                        color: '#aaa'
+                    }
+                },
+                emphasis: {
+                    textStyle: {
+                        fontSize:13,
+                        color: '#81C784'
+                    }
+                }
+            },
+            symbol: 'none',
+            lineStyle: {
+                color: 'grey'
+            },
+            checkpointStyle: {
+                color: '#bbb',
+                borderColor: '#777',
+                borderWidth: 2
+            },
+            controlStyle: {
+                fontSize:20,
+                showNextBtn: false,
+                showPrevBtn: false,
+                normal: {
+                    color: '#aaa',
+                    borderColor: '#aaa'
+                },
+                emphasis: {
+                    color: '#F06292',
+                    borderColor: '#F06292'
+                }
+            },
+            data: [
+            ]
+        },
+        backgroundColor: '#EEEEEE',                          //1.background
+        title:[{                                             //2.add a title
+                    text: [],                    //3.add a wordstamp
+                    left: 'center',
+                    top: '78%',
+                    textStyle: {
+                        fontSize: 20,
+                        color: '#aaa' ,
+                        fontWeight:'bold'
+                    }
+                }, {
+                    text: 'Pingmesh heatmap',
+                    left: 'center',
+                    top: 17,
+                    textStyle: {
+                        color: '#aaa',
+                        fontWeight: 'normal',
+                        fontSize: 40,
+                        fontWeight:'bold'
+                    }
+        }],
+        tooltip: {                                        //4. modest a tooltip
+            position: 'top',
+            padding: 5,
+            backgroundColor: '#222',
+            borderColor: '#777',
+            borderWidth: 1,
+            formatter: function (obj) {
+                var value = obj.value;
+                return  schema[3].text + schema[3].unit + '<br>'
+                        + schema[1].text + '：' + (value[1] + 1) + schema[1].unit + '<br>'
+                        + schema[0].text + '：' + (value[0] + 1) + schema[0].unit + '<br>'
+                        + schema[2].text + '：' + (value[2]) + schema[2].unit + '<br>';
+            },
+        },
+        animation: false,
+        grid: {
+            show: true,
+            height: '50%',
+            y: '10%'
+        },
+        xAxis: {
+            name: 'Client IP',      
+            type: 'category',                            //5.modest the xAxis.
+            data: hours ,
+            nameGap: 40,
+            splitArea: {
+                show: true
+            },
+            nameLocation: 'middle',
+            nameTextStyle: {
+                fontSize: 20
+            },
+            axisLine: {
+                lineStyle: {
+                    color: '#aaa'
+                }
+            },
+            axisLabel: {
+                color: function (value, index) {
+                return value >= 4 ? 'green' : 'black';
+              }
+            }
+        },
+        yAxis: {
+            name: 'Server IP',                           //5.modest the yAxis.
+            type: 'category',
+            data: days,
+            splitArea: {
+                show: true
+            },      
+            nameTextStyle: {
+                color: '#aaa',
+                fontSize: 20
+            },
+            axisLine: {
+                lineStyle: {
+                    color: '#aaa'
+                }
+            },
+            axisLabel: {
+                rotate: 25,
+                color: function (value, index) {
+                return value >= 4 ? 'green' : 'black';
+              }
+            }
+        },
+        visualMap: {
+            type: 'continuous',
+            text:['Congested','Unblocked'],
+            min: 20,
+            max: 75,
+            calculable: true,
+            orient: 'horizontal',
+            left: 'center',
+            bottom: '25%',
+            calculable: true,
+            splitNumber: 4,
+
+            inRange: {
+                        color: ['#81C784', '#A5D6A7', '#C8E6C9','#F8BBD0','#F48FB1','#F06292']
+                    }
+        },
+        visualMap: {
+        type: 'piecewise',
+        calculable: true,
+        orient: 'horizontal',
+        left: 'center',
+        bottom: '25%',
+        splitNumber: 10,
+        //borderColor:'#ccc',
+        //borderWidth:1,
+        textStyle:{
+                fontStyle: 'oblique',
+                fontWeight:'bold'
+        },
+        pieces: [
+            {max: 20,label:'<20 Unblocked',color:'#A5D6A7'},
+            {min: 20, max:30,color: '#81C784'},
+            {value: 30, label: '标准latency', color:'#66BB6A'},
+            {min: 30, max: 45,color:'#43A047'},
+            {min: 45, max: 60,color:'#F8BBD0',colorAlpha:0.89},
+            {min: 60, max: 75,color:'#F48FB1',colorAlpha:0.89},
+            {min: 75, max: 100,color:'#EC407A',colorAlpha:0.79},
+            {min: 100 , label:'>100 Congested',color:'#FF5252',colorAlpha:0.69}
+        ],
+        hoverLink :true
+        },
+        series: [{
+            name: 'Pingmesh',
+            type: 'heatmap',
+            data: [],
+            label: {
+                normal: {
+                    show: true
+                }
+            },
+            itemStyle: {
+                emphasis: {
+                    shadowBlur: 5,
+                    shadowColor: 'white',                    
+                }
+            }
+        }
+        ]
+
+    },
+    options: []
+};;
+for (var n = 0; n < time.length; n++) {
+    option.baseOption.timeline.data.push('Test Timestamp : '+(n+1));
+    option.options.push({
+        title: {
+            show: true,
+            'text': '第' + (n + 1) + '个测试时间点：' + time[n] 
+        },
+        series: {
+            name: 'Pingmesh热力图',
+            type: 'heatmap',
+            data: data[n],
+            label: {
+                normal: {
+                    show: true
+                }
+            },
+            itemStyle: {
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowColor: 'rgba(30,30,30,0.6)'
+                }
+            }
+        }
+    });
+}
+
+
+
+
+myChart.setOption(option, true);
+
+       </script>
+   </body>
+</html>
