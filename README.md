@@ -47,7 +47,6 @@ For example
 [✅Socket c++](http://c.biancheng.net/cpp/html/3029.html)
 
 
-
 ### 2018/04/12:
 * pingagent.socket 
 *  ->[version1 本地1V1手动](/pingagent_socket/version1/)
@@ -204,7 +203,7 @@ bash clearmy.sh
 ![Imrovement](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/schedule/%E5%BE%85%E6%8F%90%E9%AB%98.png)
 
 ### 2018/05/09:
-* pingagent.socket ->[version15 将vis改成Echarts网页版 heatmap1 ](/pingagent_socket/version15/heatmap1.html)
+* pingagent.socket ->[version15 将vis改成Echarts网页版 heatmap1 ](/pingagent_socket/version15/version1.png)
 
 | Series | Done | 
 | :--- | :---- | 
@@ -215,7 +214,7 @@ bash clearmy.sh
 [✅javascript 输出数据](http://www.runoob.com/js/js-output.html)
 
 ### 2018/05/10:
-* pingagent.socket ->[version15 添加time轴，heatmap1 -> heatmap 2 ](/pingagent_socket/version15/heatmap2.html)
+* pingagent.socket ->[version15 添加time轴，heatmap1 -> heatmap 2 ](/pingagent_socket/version15/version2.png)
 
 | Series | Done | 
 | :--- | :---- | 
@@ -226,8 +225,15 @@ bash clearmy.sh
 [✅Echarts TimeLine 教程](http://echarts.baidu.com/option.html#timeline)
 
 ### 2018/05/11:
-* pingagent.socket ->[version15 添加vismap, heatmap2 -> heatmap 3 ](/pingagent_socket/version15/heatmap3.html)
+* pingagent.socket ->[version15 添加vismap, heatmap 2 -> heatmap 3 ](/pingagent_socket/version15/version3.png)
+* pingagent.socket ->[version15 添加涟漪特效, heatmap 3 -> heatmap 4 ](/pingagent_socket/version15/version4.png)
+
+
 
 | Series | Done | 
 | :--- | :---- | 
-| 1 | 将修缮vismap |
+| 1 | 改进vismap 彩色坐标标轴 |
+| 2 | 添加涟漪特效：对于latency延误在前3位的数字 |
+
+* 可视化新效果
+![New Pingmesh visulization](https://drive.google.com/file/d/1jf7E2ndCaBcvreGIj82qUm-X9FJDHHzF/view?usp=sharing)
