@@ -226,7 +226,7 @@ bash clearmy.sh
 
 ### 2018/05/11:
 * pingagent.socket ->[version15 添加vismap, heatmap 2 -> heatmap 3 ](/pingagent_socket/version15/version3.png)
-* pingagent.socket ->[version15 添加涟漪特效, heatmap 3 -> heatmap 4 ](/pingagent_socket/version15/version4.png)
+* pingagent.socket ->[version15 添加涟漪特效, heatmap 3 -> heatmap 4 ](/pingagent_socket/version15/heatmap4.html)
 
 
 
