@@ -204,7 +204,7 @@ bash clearmy.sh
 ![Imrovement](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/schedule/%E5%BE%85%E6%8F%90%E9%AB%98.png)
 
 ### 2018/05/09:
-* pingagent.socket ->[version15 将vis改成Echarts网页版 ](/pingagent_socket/version15/)
+* pingagent.socket ->[version15 将vis改成Echarts网页版 heatmap1 ](/pingagent_socket/version15/heatmap1.html)
 
 | Series | Done | 
 | :--- | :---- | 
@@ -215,7 +215,7 @@ bash clearmy.sh
 [✅javascript 输出数据](http://www.runoob.com/js/js-output.html)
 
 ### 2018/05/10:
-* pingagent.socket ->[version15 将vis改成Echarts网页版 ](/pingagent_socket/version15/)
+* pingagent.socket ->[version15 添加time轴，heatmap1 -> heatmap 2 ](/pingagent_socket/version15/heatmap2.html)
 
 | Series | Done | 
 | :--- | :---- | 
@@ -224,3 +224,10 @@ bash clearmy.sh
 [✅html语言入门](http://www.w3school.com.cn/b.asp)
 [✅Echarts文档](http://echarts.baidu.com/option.html#series-heatmap.data)
 [✅Echarts TimeLine 教程](http://echarts.baidu.com/option.html#timeline)
+
+### 2018/05/11:
+* pingagent.socket ->[version15 添加vismap, heatmap2 -> heatmap 3 ](/pingagent_socket/version15/heatmap3.html)
+
+| Series | Done | 
+| :--- | :---- | 
+| 1 | 将修缮vismap |
