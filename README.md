@@ -219,7 +219,7 @@ bash clearmy.sh
 
 | Series | Done | 
 | :--- | :---- | 
-| 2 | 将Echarts合并timestamp,可变动的pingmesh图 |
+| 1 | 将Echarts合并timestamp,可变动的pingmesh图 |
 
 [✅html语言入门](http://www.w3school.com.cn/b.asp)
 [✅Echarts文档](http://echarts.baidu.com/option.html#series-heatmap.data)
