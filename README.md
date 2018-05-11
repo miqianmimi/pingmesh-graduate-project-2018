@@ -214,3 +214,13 @@ bash clearmy.sh
 [✅Echarts timestamp](http://www.echartsjs.com/gallery/editor.html?c=scatter-life-expectancy-timeline)
 [✅javascript 输出数据](http://www.runoob.com/js/js-output.html)
 
+### 2018/05/10:
+* pingagent.socket ->[version15 将vis改成Echarts网页版 ](/pingagent_socket/version15/)
+
+| Series | Done | 
+| :--- | :---- | 
+| 2 | 将Echarts合并timestamp,可变动的pingmesh图 |
+
+[✅html语言入门](http://www.w3school.com.cn/b.asp)
+[✅Echarts文档](http://echarts.baidu.com/option.html#series-heatmap.data)
+[✅Echarts TimeLine 教程](http://echarts.baidu.com/option.html#timeline)
