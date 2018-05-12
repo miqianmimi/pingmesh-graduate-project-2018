@@ -242,7 +242,7 @@ bash clearmy.sh
 [✅好看的分割线](https://blog.csdn.net/alex8046/article/details/51917069)
 [✅画latency的图](http://echarts.baidu.com/examples/editor.html?c=candlestick-brush&theme=light)
 
-### 2018/05/11:
+### 2018/05/12:
 * pingagent.socket ->[version15 添加Latency Bar, heatmap 4 -> heatmap 5 ](/pingagent_socket/version15/heatmap5.html)
 
 | Series | Done | 
