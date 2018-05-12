@@ -228,14 +228,32 @@ bash clearmy.sh
 * pingagent.socket ->[version15 添加vismap, heatmap 2 -> heatmap 3 ](/pingagent_socket/version15/version3.png)
 * pingagent.socket ->[version15 添加涟漪特效, heatmap 3 -> heatmap 4 ](/pingagent_socket/version15/heatmap4.html)
 
-
-
 | Series | Done | 
 | :--- | :---- | 
 | 1 | 改进vismap 彩色坐标标轴 |
 | 2 | 添加涟漪特效：对于latency延误在前3位的数字 |
 | 3 | 合并另一个Latency图 |
 
-
 * 可视化新效果
 ![New Pingmesh visulization](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/pingagent_socket/version15/version4.png)
+
+[✅Echarts高亮](http://echarts.baidu.com/option.html#calendar)
+[✅网页切块](http://blog.51cto.com/wuwei5460/1324543)
+[✅好看的分割线](https://blog.csdn.net/alex8046/article/details/51917069)
+[✅画latency的图](http://echarts.baidu.com/examples/editor.html?c=candlestick-brush&theme=light)
+
+### 2018/05/11:
+* pingagent.socket ->[version15 添加Latency Bar, heatmap 4 -> heatmap 5 ](/pingagent_socket/version15/heatmap5.html)
+
+| Series | Done | 
+| :--- | :---- | 
+| 1 | 正确显示latency	 |
+| 2 | 添加zoom可缩放条+animation特效 |
+| 3 | 合并两个container到一张图 |
+
+* 可视化完整效果
+![New Pingmesh visulization](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/pingagent_socket/version15/version5.png)
+
+[✅多条线段](http://echarts.baidu.com/examples/editor.html?c=line-stack)
+[✅分段色彩](http://echarts.baidu.com/examples/editor.html?c=line-aqi)
+[✅ datazoom](http://echarts.baidu.com/option.html#dataZoom)
