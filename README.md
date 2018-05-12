@@ -234,6 +234,8 @@ bash clearmy.sh
 | :--- | :---- | 
 | 1 | 改进vismap 彩色坐标标轴 |
 | 2 | 添加涟漪特效：对于latency延误在前3位的数字 |
+| 3 | 合并另一个图 |
+
 
 * 可视化新效果
 ![New Pingmesh visulization](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/pingagent_socket/version15/version4.png)
