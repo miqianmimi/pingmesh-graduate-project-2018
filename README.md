@@ -11,21 +11,31 @@ The log file consist of many lines, each line in log file is a json object and i
 {"Host": "10.2.96.50", "Timestamp": 1523263580577352,"Entries": [Timestamp, SrcIP, DstIP, Protocol, RTT], ...]}
 ```
 
-## Example":
-result.json
+## Example:
+result.json 
 ```json
 {"host":"192.168.1.1","timestamp":1524502747,"num":1,"entries":[[1524502747,"192.168.1.1",8910,"192.168.1.41",8910,"tcp","tor",0,0.000823,0]]}
 ```
-->1.data.json ;2.timestamp.json; 3.server.json
+分成三块Json：
+
+1.data.json 
 ```json
 var data = {
 "data":[
 [[0, 0, 0], [0, 1, 82], [0, 2, 57], [0, 3, 74], [0, 4, 70], [0, 5, 66], [0, 6, 65], [0, 7, 64], [1, 0, 179]...]...]};
-var server = {
-"server":[["192.168.1.1","192.168.1.40","192.168.1.41","192.168.1.42","192.168.1.46","192.168.1.48","192.168.1.49","192.168.1.50"]]};
+```
+2.timestamp.json
+```json
 var timestamp = {
 "timestamp":[[1524502747,1524502750,1524502753,1524502756]]};
 ```
+
+3.server.json
+```json
+var server = {
+"server":[["192.168.1.1","192.168.1.40","192.168.1.41","192.168.1.42","192.168.1.46","192.168.1.48","192.168.1.49","192.168.1.50"]]};
+```
+
 
 ## 毕设参考文档及每日进展：
 
