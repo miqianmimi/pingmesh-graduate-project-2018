@@ -277,3 +277,12 @@ bash clearmy.sh
 [✅多条线段](http://echarts.baidu.com/examples/editor.html?c=line-stack)
 [✅分段色彩](http://echarts.baidu.com/examples/editor.html?c=line-aqi)
 [✅ datazoom](http://echarts.baidu.com/option.html#dataZoom)
+
+### 2018/05/15:
+
+| Series | Done | 
+| :--- | :---- | 
+| 1 | 论文提纲完成撰写一部分	|
+| 2 | 研读+RDMA 缺点论文 |
+
+[✅RDMA over Commodity Ethernet at Scale](http://delivery.acm.org/10.1145/2940000/2934908/p202-guo.pdf?ip=175.159.126.197&id=2934908&acc=PUBLIC&key=CDD1E79C27AC4E65%2EFC30B8D6EF32B758%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1526398003_b29114454296136b27e611a692059607)
