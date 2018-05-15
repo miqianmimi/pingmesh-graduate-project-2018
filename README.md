@@ -254,6 +254,8 @@ bash clearmy.sh
 | 2 | 添加涟漪特效：对于latency延误在前3位的数字 |
 | 3 | 合并另一个Latency图 |
 
+* 旧的可视化效果：
+![Old Pingmesh Visulization](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/vis/pingmesh.png)
 * 可视化新效果
 ![New Pingmesh visulization](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/version15/version4.png)
 
