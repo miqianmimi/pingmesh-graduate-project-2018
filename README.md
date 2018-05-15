@@ -274,7 +274,7 @@ bash clearmy.sh
 | 3 | 合并两个container到一张图 |
 
 * 可视化完整效果
-![New Pingmesh visulization](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/version15/version5(2).png)
+![New Pingmesh visulization](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/version15/version5.png)
 
 [✅多条线段](http://echarts.baidu.com/examples/editor.html?c=line-stack)
 [✅分段色彩](http://echarts.baidu.com/examples/editor.html?c=line-aqi)
