@@ -1,7 +1,7 @@
 # Pingmesh reimplementation
 Author: Yiqing Ma
 
-idea from: [郭传雄](https://www.youtube.com/watch?v=qPkQSH1iNqc) SIGCOMM
+idea from: [郭传雄](https://www.microsoft.com/en-us/research/publication/pingmesh-large-scale-system-data-center-network-latency-measurement-analysis/) SIGCOMM
 
 ✅的表示参考文档，表格内是进展，* 后表示代码更新处 
 
