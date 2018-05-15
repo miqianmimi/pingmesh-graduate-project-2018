@@ -1,7 +1,5 @@
 # Pingmesh reimplementation
-Author: Yiqing Ma
-
-idea from: [郭传雄](https://www.youtube.com/watch?v=qPkQSH1iNqc) SIGCOMM
+idea from: [郭传雄](https://www.microsoft.com/en-us/research/publication/pingmesh-large-scale-system-data-center-network-latency-measurement-analysis/) SIGCOMM
 
 ✅的表示参考文档，表格内是进展，* 后表示代码更新处 
 
@@ -204,9 +202,9 @@ bash clearmy.sh
 ```
 
 * 结构图：
-![Structure](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/schedule/%E7%BB%93%E6%9E%84%E5%9B%BE.png)
+![Structure](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/middle-result/%E7%BB%93%E6%9E%84%E5%9B%BE.png)
 * 包含文件内容图
-![Contain](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/schedule/%E6%89%80%E5%90%AB%E5%86%85%E5%AE%B9%E6%96%87%E4%BB%B6%E5%9B%BE.png)
+![Contain](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/middle-result/%E6%89%80%E5%90%AB%E5%86%85%E5%AE%B9%E6%96%87%E4%BB%B6%E5%9B%BE.png)
 
 
 ### 2018/04/24:
@@ -220,7 +218,7 @@ bash clearmy.sh
 
 [✅python动图](https://zhuanlan.zhihu.com/p/31323002)
 * 待提高点：
-![Imrovement](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/schedule/%E5%BE%85%E6%8F%90%E9%AB%98.png)
+![Imrovement](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/middle-result/%E5%BE%85%E6%8F%90%E9%AB%98.png)
 
 ### 2018/05/09:
 * pingagent.socket ->[version15 将vis改成Echarts网页版 heatmap1 ](/pingagent_socket/version15/version1.png)
@@ -254,8 +252,10 @@ bash clearmy.sh
 | 2 | 添加涟漪特效：对于latency延误在前3位的数字 |
 | 3 | 合并另一个Latency图 |
 
+* 旧的可视化效果：
+![Old Pingmesh Visulization](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/vis/pingmesh.png)
 * 可视化新效果
-![New Pingmesh visulization](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/pingagent_socket/version15/version4.png)
+![New Pingmesh visulization](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/version15/version4.png)
 
 [✅Echarts高亮](http://echarts.baidu.com/option.html#calendar)
 [✅网页切块](http://blog.51cto.com/wuwei5460/1324543)
@@ -272,8 +272,17 @@ bash clearmy.sh
 | 3 | 合并两个container到一张图 |
 
 * 可视化完整效果
-![New Pingmesh visulization](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/pingagent_socket/version15/version5.png)
+![New Pingmesh visulization](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/version15/version5.png)
 
 [✅多条线段](http://echarts.baidu.com/examples/editor.html?c=line-stack)
 [✅分段色彩](http://echarts.baidu.com/examples/editor.html?c=line-aqi)
 [✅ datazoom](http://echarts.baidu.com/option.html#dataZoom)
+
+### 2018/05/15:
+
+| Series | Done | 
+| :--- | :---- | 
+| 1 | 论文提纲完成撰写一部分	|
+| 2 | 研读+RDMA 缺点论文 |
+
+[✅RDMA over Commodity Ethernet at Scale](http://delivery.acm.org/10.1145/2940000/2934908/p202-guo.pdf?ip=175.159.126.197&id=2934908&acc=PUBLIC&key=CDD1E79C27AC4E65%2EFC30B8D6EF32B758%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1526398003_b29114454296136b27e611a692059607)
