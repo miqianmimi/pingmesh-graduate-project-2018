@@ -67,11 +67,14 @@ print(TIME[1])
 print(TIME[2])
 print(TIME[3])
 print(server_how_many )
-# what i want now : first a data.json (RTT) second a server.json (SERVER NAME) last a timestamp.json( TIME STAMP )
+# what i want now : first a data.json (RTT) second a server.json (SERVER NAME) last a timestamp.json( TIME STAMP ) the add one is the rtt.json(rtt)
+
+
 server=[]
 for i in range(len(SERVER)):
     server.append("\""+str(SERVER[i][0])+"\"")
-print(server[1])
+
+
 timestamp_how_many = int(len(RTT[0]) / (server_how_many - 1))
 ans = []
 for m in range(timestamp_how_many):
@@ -90,7 +93,31 @@ for m in range(timestamp_how_many):
                 ans[m].append([i, j, int( 100000 * RTT[i][j + m * (server_how_many - 1) - count])])
 #print(ans)
 #print(len(ans[0]))
+rtt=[]
 
+for i in range(server_how_many): #8
+    rtt.append ([])
+    for t in range(len(ans)): #4
+        for j in range(server_how_many):
+            if j != i:
+                rtt[i].append(ans[t][j + i * (server_how_many)][2])
+
+rtt.append([])
+for i in range(len(rtt[0])):
+    sum = 0
+    for j in range(len(rtt)-1):# 1,2,3,4,5,6,7,8
+        sum += rtt[j][i]
+    p = int(sum / (len(rtt) - 1))
+    rtt[-1].append(p)
+
+print(rtt[-1])
+
+#for i in range(int(len(TIME[0])/(server_how_many - 1))):
+#    b = 0
+#    for j in range(len(ans[i])):
+#        b = b + ans[i][j][2]
+#        a = int(b/(len(ans[0])-server_how_many))
+#    rtt[-1].append(a)
 
 output = open('/tmp/server.json', 'w')
 output.write("var server = ")
@@ -125,7 +152,7 @@ output2.write("};")
 output2.close()
 
 
-output3= open('/tmp/timestamp.json','w')
+output3 = open('/tmp/timestamp.json','w')
 output3.write("var timestamp = {\n")
 output3.write("\"timestamp\":[\n ")
 output3.write("[")
@@ -139,6 +166,19 @@ output3.write("]")
 output3.write('\n')
 output3.write("};")
 output3.close()
+
+output4 = open('/tmp/rttaverage.json','w')
+output4.write("var rtt = {\n")
+output4.write("\"rtt\":[\n ")
+for i in range(len(rtt)):
+    output4.write(str(rtt[i]))
+    if i != len(rtt) - 1:
+        output4.write(',\n')
+output4.write("\n")
+output4.write("]\n")
+output4.write("};")
+output4.close()
+
 
 print(" ")
 print(" ")
