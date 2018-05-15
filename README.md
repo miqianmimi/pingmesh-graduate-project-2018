@@ -1,7 +1,8 @@
 # Pingmesh reimplementation
 Author: Yiqing Ma
-//
-Idea from: [郭传雄](https://www.youtube.com/watch?v=qPkQSH1iNqc) SIGCOMM
+
+
+idea from: [郭传雄](https://www.youtube.com/watch?v=qPkQSH1iNqc) SIGCOMM
 
 ✅的表示参考文档，表格内是进展，星号后表示代码更新处 
 
