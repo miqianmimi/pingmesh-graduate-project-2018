@@ -8,7 +8,7 @@ idea from: [郭传雄](https://www.youtube.com/watch?v=qPkQSH1iNqc) SIGCOMM
 ## Log format:
 The log file consist of many lines, each line in log file is a json object and is formatted like below
 ```json
-{"Host": "10.2.96.50", "Timestamp": 1523263580577352,"Entries": [timestamp, src, Dst, protocol, RTT], ...]}
+{"Host": "10.2.96.50", "Timestamp": 1523263580577352,"Entries": ["timestamp", "src", "Dst", "protocol", "RTT"], ...]}
 ```
 
 ## Example:
