@@ -5,10 +5,26 @@ idea from: [郭传雄](https://www.youtube.com/watch?v=qPkQSH1iNqc) SIGCOMM
 
 ✅的表示参考文档，表格内是进展，* 后表示代码更新处 
 
-## Log format
+## Log format:
 The log file consist of many lines, each line in log file is a json object and is formatted like below
 ```json
-{"Host": "10.2.96.50", "Timestamp": 1523263580577352,"Entries": [[Timestamp, SrcIP, DstIP, Protocol, RTT], ...]}
+{"Host": "10.2.96.50", "Timestamp": 1523263580577352,"Entries": [Timestamp, SrcIP, DstIP, Protocol, RTT], ...]}
+```
+
+## Example":
+result.json
+```json
+{"host":"192.168.1.1","timestamp":1524502747,"num":1,"entries":[[1524502747,"192.168.1.1",8910,"192.168.1.41",8910,"tcp","tor",0,0.000823,0]]}
+```
+->1.data.json ;2.timestamp.json; 3.server.json
+```json
+var data = {
+"data":[
+[[0, 0, 0], [0, 1, 82], [0, 2, 57], [0, 3, 74], [0, 4, 70], [0, 5, 66], [0, 6, 65], [0, 7, 64], [1, 0, 179]...]...]};
+var server = {
+"server":[["192.168.1.1","192.168.1.40","192.168.1.41","192.168.1.42","192.168.1.46","192.168.1.48","192.168.1.49","192.168.1.50"]]};
+var timestamp = {
+"timestamp":[[1524502747,1524502750,1524502753,1524502756]]};
 ```
 
 ## 毕设参考文档及每日进展：
