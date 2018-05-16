@@ -296,6 +296,17 @@ bash clearmy.sh
 | 3 | 制定last11-things计划 |
 | 4 | DEMO3介绍完成 |
 
+[✅Stanford NetSight1](http://www.scs.stanford.edu/~dm/home/papers/handigol:netsight.pdf)
+[✅Stanford NetSight2](http://yuba.stanford.edu/~nickm/papers/nikhil-thesis.pdf)
+[✅Microsoft Pingmesh](https://www.microsoft.com/en-us/research/publication/pingmesh-large-scale-system-data-center-network-latency-measurement-analysis/)
+[✅RDMA VS TCP](https://www.youtube.com/watch?v=u5EWqojkI1A)
+[✅DC needs RDMA](https://conferences.sigcomm.org/events/apnet2017/slides/cx.pdf)
+[✅RDMA over Ethernet中文版](https://blog.csdn.net/upupday19/article/details/79219897)
+[✅RDMA PFC死锁 RDMA活锁 郭传雄草稿](http://blog.sina.com.cn/s/blog_569dd33a0102wzg4.html)
+[✅ 吞吐与延迟](http://www.cnblogs.com/binyao/p/5162424.html)
+[✅RDMA no need of lossless](http://netseminar.stanford.edu/seminars/03_16_17.pdf)
+[✅RDMA 的性能异常](http://www.mosharaf.com/wp-content/uploads/fairdma-kbnets2017.pdf)
+
 
 ## 第三版demo的操作指南
 
