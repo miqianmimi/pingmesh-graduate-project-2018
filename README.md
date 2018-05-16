@@ -313,16 +313,16 @@ bash clearmy.sh
 * 所需文件：
 
 <div align="center">
-<img src="https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/demo3/1.png" height="220" width="220" >
+<img src="https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/demo3/1.png" height="220" width="270" >
 
-<img src="https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/demo3/2.png" height="220" width="220" >
+<img src="https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/demo3/2.png" height="220" width="270" >
 
-<img src="https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/demo3/3.png" height="220" width="220" >
+<img src="https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/demo3/3.png" height="220" width="270" >
 
  </div>
  
  
-* 代码部分：把这些文件全部放到v13内,运行下面部分代码，可以得到实时的ping的值 
+* 代码部分：见agent-con-dsa/demo3
 ```
 ssh yiqing@143.89.191.114
 cd pingmesh
