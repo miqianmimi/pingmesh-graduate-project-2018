@@ -311,11 +311,18 @@ bash clearmy.sh
 ## 第三版demo的操作指南
 
 * 所需文件：
-![1]()
-![2]()
-![3]()
 
-* 代码部分：把这些文件全部放到v13内,运行下面部分代码，可以得到实时的ping的值 
+<div align="center">
+<img src="https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/demo3/1.png" height="220" width="270" >
+
+<img src="https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/demo3/2.png" height="220" width="270" >
+
+<img src="https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/demo3/3.png" height="220" width="270" >
+
+ </div>
+ 
+ 
+* 代码部分：见agent-con-dsa/demo3
 ```
 ssh yiqing@143.89.191.114
 cd pingmesh
@@ -330,5 +337,53 @@ python json2html.py
 open ping-vis.html
 ```
 
+
+### 2018/05/17:
+
+| Series | Done | 
+| :--- | :---- | 
+| 1 | 论文除RDMA部分全部完成	|
+| 2 | 论文修订格式 |
+| 3 | 图片及待做实验 |
+
+1.数据中心网络拓扑结构图
+
+2.RDMA和TCP/IP的传输路径对比图
+
+3.RDMA在数据中心中的应用
+
+4.网络监测系统中agent模块内容
+
+5.网络监测系统中controller模块内容
+
+6.main.sh运行操作代码
+
+7.网络监测系统中DSA模块内容
+
+8.微软pingmesh可视化效果图
+
+9.网络监测系统旧版本可视化效果
+
+10.网络监测系统新版本可视化效果图
+
+11.网络监测系统运行流程图（待更新）
+
+12.网络监测系统运行操作代码
+
+13.网络监测系统GUI界面（待做）
+
+14.不同时间点下TCP/IP热力图可视化(I)时序图
+
+15.不同时间点下TCP/IP条形图可视化(II)时序图
+
+16.RDMA和TCP/IP不同的可视化效果对比图（待做）
+
+17.RDMA网络下时序图产生的特殊点orPattern分析图（待做）
+
+18.大规模数据中心仿真实验的可视化新结果(I) (待做）
+
+19.大规模数据中心仿真实验的可视化新结果(II) (待做）
+
+20.【我分别在网络空载的情况下和网络负载的情况下进行我的实验，对得出的Pattern进行分析】（待做）
 
 
