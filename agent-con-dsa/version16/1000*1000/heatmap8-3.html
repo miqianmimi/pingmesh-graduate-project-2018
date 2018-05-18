@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%"> </div>
+       <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
+       <div id="container2" style="height: 100%"></div>       
+        <script src="file:///tmp/echarts.js"></script>  
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+       <script src="file:///tmp/server.json"></script>
+       <script src="file:///tmp/data.json"></script>
+       <script src="file:///tmp/timestamp.json"></script>
+       <script src="file:///tmp/rttaverage.json"></script>
+       <script type="text/javascript">
+
+
+
+alert("Pingmesh Visualize");
+
+var dom = document.getElementById("container");
+
+var myChart = echarts.init(dom);
+var app = {};
+
+option = null;
+app.title = 'Pingmesh热力图';
+
+
+//1·横纵坐标
+var hours = new Array()
+for (var i = 0;i < server['server'][0].length;i++)
+{
+  hours[i] = server['server'][0][i]
+}
+
+
+
+var hourss = new Array()
+var hourss1 = new Array()
+var count = 0 
+for (var i = 0;i < server['server'][0].length-3;i++)
+{
+    if (i % 3 == 0){  
+        hourss[count] = "ToR: "+server['server'][0][i]+"-"+server['server'][0][i+3]
+        hourss1[count] = "ToR" + (count+1)
+        count = count + 1
+    }
+}
+
+
+
+
+var hoursss = new Array()
+var hoursss1 = new Array()
+var daysss1 = new Array()
+var countt = 0 
+for (var i = 0;i < server['server'][0].length;i++)
+{
+    if (i % 9 == 0 && i + 9 < server['server'][0].length){  
+        hoursss[countt] = "Spine: "+server['server'][0][i]+"-"+server['server'][0][i+9]
+        hoursss1[countt]="Spine"+ (countt+1) 
+        daysss1[countt] = "Spine"+(countt+1)
+       
+        countt = countt + 1
+    }
+}
+
+//2.纵坐标
+var days = new Array()
+for (var i = 0;i < server['server'][0].length;i++)
+{
+
+  days[i] = server['server'][0][i]
+}
+        //['Saturday', 'Friday', 'Thursday',
+        //'Wednesday', 'Tuesday', 'Monday', 'Sunday'];
+
+var dayss = new Array()
+var dayss1 = new Array()
+count = 0
+for (var i = 0;i < server['server'][0].length;i++)
+{
+    if (i % 9 == 0 && i + 9 < server['server'][0].length){  
+        dayss[count] = server['server'][0][i]+"-"+server['server'][0][i+9]+" ToR"
+        dayss1[count] = "ToR"+(count+1)
+        count = count + 1
+    }
+}
+var daysss = new Array()
+count = 0
+for (var i = 0;i < server['server'][0].length;i++)
+{
+    if (i % 18 == 0 && i + 18 < server['server'][0].length){  
+        daysss[count] = server['server'][0][i]+"-"+server['server'][0][i+20]+" Spine"
+        count = count + 1
+    }
+} 
+
+//3·timestamp
+var time = new Array()
+for (var i=0;i<timestamp['timestamp'][0].length;i++)
+{
+  time[i] = timestamp['timestamp'][0][i]
+} 
+
+
+//4·data热力图值
+var data = data['data']
+for (var j = 0; j < data.length; j++)
+{
+
+    data[j] = data[j].map(function (item) {
+        return [item[0], item[1], item[2] || '-'];
+    });
+} 
+
+
+//5.trick>70项
+var trick = new Array()
+for (var i= 0; i<data.length;i++) {
+    trick.push([])
+    for (var j = 0; j < data[0].length; j++){
+        if (i == 0) {
+            if (data[i][j][2] > 100){
+                trick[i].push([data[i][j][0],data[i][j][1],data[i][j][2]])
+            }
+        }
+        if (i > 0) {
+            if (data[i][j][2] > 100){
+                trick[i].push([data[i][j][0],data[i][j][1],data[i][j][2]])
+            }
+        }
+    }
+}
+//6.rtt cdf 
+
+var rttt =  new Array() 
+for (var i = 0 ; i < rtt['rtt'].length;i++ )
+{
+    rttt.push([])
+    for (var j = 0; j < rtt['rtt'][i].length; j++){
+        rttt[i].push(rtt['rtt'][i][j])
+    }
+}
+//console.log(trick[0])
+
+var schema = [                                           //4.modest 标注
+    {name: 'Server', index: 0, text: 'Server', unit: ' 号服务器'}, 
+    {name: 'Client', index: 1, text: 'Client', unit: ' 号服务器'},
+    {name: 'Latency Time', index: 2, text: 'Latency', unit: ' 微秒'},
+    {name: 'Pingmesh', index: 3, text:'Pingmesh', unit: ' 信息'}
+];
+
+ option = {
+    baseOption:{
+        timeline: {
+            color : '#aaa',
+            show : true,
+            axisType: 'category',
+            orient: 'vertical',
+            autoPlay: false,
+            inverse: true,
+            playInterval: 1000,
+            left: '10%',
+            top: '13%',
+            bottom: '20%',
+            width: 55,
+            label: {
+                normal: {
+                    rotate:10,
+                    fontSize:15,
+                    textStyle: {
+                        color: '#aaa'
+                    }
+                },
+                emphasis: {
+                    textStyle: {
+                        fontSize:15,
+                        color: '#81C784'
+                    }
+                }
+            },
+            symbol: 'none',
+            lineStyle: {
+                color: 'grey'
+            },
+            checkpointStyle: {
+                color: '#bbb',
+                borderColor: '#777',
+                borderWidth: 2
+
+            },
+            controlStyle: {
+                fontSize:20,
+                showNextBtn: true,
+                showPrevBtn: true,
+                normal: {
+                    color: '#aaa',
+                    borderColor: '#aaa'
+                },
+                emphasis: {
+                    color: '#F06292',
+                    borderColor: '#F06292'
+                }
+            },
+            data: []
+        },
+        backgroundColor: '#EEEEEE',                          //1.background
+        title:[{                                             //2.add a title
+                    text: [],                    //3.add a wordstamp
+                    left: 'center',
+                    bottom: '3%',
+                    textStyle: {
+                        fontSize: 20,
+                        color: '#aaa' ,
+                        fontWeight:'bold'
+                    }
+                }, {
+                    text: 'Pingmesh heatmap',
+                    left:5,
+                    top:10,
+                    textStyle: {
+                        color: '#FF80AB',
+                        fontWeight: 'normal',
+                        fontSize: 40,
+                        fontWeight:'bold'
+                    }
+        }],
+        tooltip: {                                        //4. modest a tooltip
+            position: 'top',
+            padding: 5,
+            backgroundColor: '#222',
+            borderColor: '#777',
+            borderWidth: 1,
+            formatter: function (obj) {
+                var value = obj.value;
+                return  schema[3].text + schema[3].unit + '<br>'
+                        + schema[1].text + '：' + (value[1] + 1) + schema[1].unit + '<br>'
+                        + schema[0].text + '：' + (value[0] + 1) + schema[0].unit + '<br>'
+                        + schema[2].text + '：' + (value[2]) + schema[2].unit + '<br>';
+            },
+        },
+        animation: false,
+        grid: {
+            show: true,
+            left: '27%',
+            right: '27%',
+            top: '16%',
+            bottom: '25%'
+        },
+        xAxis: [{
+            name: 'Client IP',      
+            type: 'category', 
+            data: hours ,
+            nameGap: 80,
+            splitArea: {
+                show: true
+            },
+            nameLocation: 'middle',
+            nameTextStyle: {
+                fontSize: 20
+            },
+            axisLine: {
+                lineStyle: {
+                    color: '#aaa'
+                }
+            },
+            axisLabel: {
+                rotate:0,
+                color:'black',
+                textStyle:{
+                    fontSize:13
+                }
+            }
+        },
+        {
+            name:'以ToR为单位',
+            nameGap: 3,
+            nameLocation:'end',
+            nameTextStyle: {
+                fontSize: 15,
+                color:'#aaa'
+            },
+            axisLabel: {
+                color:'#aaa',
+                textStyle:{
+                    fontSize:15
+                }
+            },           
+            type: 'category',                            //adjust the xAxis2.
+            data: hourss 
+        },
+        {
+            show:false,
+            name:'以ToR为单位',
+            nameGap: 3,
+            nameLocation:'end',
+            nameTextStyle: {
+                fontSize: 15,
+                color:'#aaa'
+            },
+            axisLabel: {
+                color:'#aaa',
+                textStyle:{
+                    fontSize:15
+                }
+            },           
+            type: 'category',                            //adjust the xAxis2.
+            data: hourss1
+        },
+        {   
+            name:'以Spine为单位',
+            offset:35,
+            nameGap:3,
+            nameTextStyle: {
+                fontSize: 15,
+                color:'#aaa'
+            },
+            axisLabel: {
+                color:'black',
+                textStyle:{
+                    fontSize:17
+                }
+            },           
+            type: 'category',                            //adjust the xAxis2.
+            data: hoursss
+        },
+        {   show:false,
+            name:'以Spine为单位',
+            offset:35,
+            nameGap:3,
+            nameTextStyle: {
+                fontSize: 15,
+                color:'#aaa'
+            },
+            axisLabel: {
+                color:'black',
+                textStyle:{
+                    fontSize:17
+                }
+            },           
+            type: 'category',                            //adjust the xAxis2.
+            data: hoursss1
+        }],
+        yAxis: [{
+            name: 'Server IP', 
+            nameLocation:'middle',             //5.modest the yAxis.
+            nameGap:80,
+            type: 'category',
+            data: days,
+            splitArea: {
+                show: true
+            },      
+            nameTextStyle: {
+                color: '#aaa',
+                fontSize: 20
+            },
+            axisLine: {
+                lineStyle: {
+                    color: '#aaa'
+                }
+            },
+            axisLabel: {
+                rotate: 0,
+                color:'black',
+                textStyle:{
+                    fontSize:13
+                }
+            }
+        },
+        {   axisLabel: {
+                color:'#aaa',
+                rotate:-5,
+                textStyle:{
+                    fontSize:15
+                }
+            },           
+            type: 'category',                            //adjust the xAxis2.
+            data: dayss
+        },
+        {   show:false,
+            axisLabel: {
+                color:'#aaa',
+                rotate:-5,
+                textStyle:{
+                    fontSize:15
+                }
+            },           
+            type: 'category',                            //adjust the xAxis2.
+            data: dayss1
+        },        
+        {   
+            offset: 40,
+            axisLabel: {
+                color:'black',
+                rotate:-5,
+                textStyle:{
+                    fontSize:17
+                }
+            },           
+            type: 'category',                            //adjust the xAxis2.
+            data:daysss
+        },
+        {   
+            show:false,
+            offset: 40,
+            axisLabel: {
+                color:'black',
+                rotate:-5,
+                textStyle:{
+                    fontSize:17
+                }
+            },           
+            type: 'category',                            //adjust the xAxis2.
+            data:daysss1
+        }],
+        visualMap: {
+            type: 'continuous',
+            text:['Congested','Unblocked'],
+            min: 20,
+            max: 75,
+            calculable: true,
+            orient: 'horizontal',
+            left: 'center',
+            bottom: '12%',
+            calculable: true,
+            splitNumber: 4,
+
+            inRange: {
+                        color: ['#81C784', '#A5D6A7', '#C8E6C9','#F8BBD0','#F48FB1','#F06292']
+                    }
+        },
+        visualMap: {
+            type: 'piecewise',
+            calculable: true,
+            orient: 'horizontal',
+            left: 'center',
+            bottom: '9%',
+            splitNumber: 10,
+            //borderColor:'#ccc',
+            //borderWidth:1,
+            textStyle:{
+                    fontStyle: 'oblique',
+                    fontWeight:'bold'
+            },
+            pieces: [
+                {max: 20,label:'<20 Unblocked',color:'#A5D6A7'},
+                {min: 20, max:30,color: '#81C784'},
+                {min: 30, max: 40,color:'#43A047'},
+                {min: 40, max: 50,color:'#388E3C'},
+                {min: 50, max: 55,color:'#2E7D32'},
+                {min: 55, max: 60,color:'#EF9A9A'},
+                {min: 60, max: 70,color:'#FF80AB',colorAlpha:0.79},
+                {min: 70, max: 80,color:'#EC407A',colorAlpha:0.79},
+                {min: 80, max: 100,color:'#E91E63',colorAlpha:0.79},
+                {min: 100 , label:'>100 Congested',color:'#D81B60',colorAlpha:0.79}
+            ],
+            hoverLink :true
+        },
+        dataZoom: [
+        {
+            start:37.5,
+            end:50,
+            fillerColor: new echarts.graphic.LinearGradient(1, 0, 0, 0, [{  
+                //给颜色设置渐变色 前面4个参数，给第一个设置1，第四个设置0 ，就是水平渐变  
+                //给第一个设置0，第四个设置1，就是垂直渐变  
+                offset: 0,  
+                color: '#1eb5e5'  
+            },
+            {
+                offset:0.5,
+                color:'white'
+            }  ,
+            {  
+               offset: 1,  
+               color: '#5ccbb1'  
+            }]),  
+            bottom:"17%",
+            id: 'dataZoomX',
+            type: 'slider',
+            handleIcon: 'M10.7,11.9v-1.3H9.3v1.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4v1.3h1.3v-1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7V23h6.6V24.4z M13.3,19.6H6.7v-1.4h6.6V19.6z',
+            handleSize: '80%',
+            handleStyle: {
+                color: '#fff',
+                shadowBlur: 3,
+                shadowColor: 'rgba(0, 0, 0, 0.6)',
+                shadowOffsetX: 2,
+                shadowOffsetY: 2
+            },
+            zoomOnMouseWheel:true,                   
+            moveOnMouseMove:true,   
+            xAxisIndex: [4,3,2,1,0],
+ 
+            //filterMode: 'filter',
+            textStyle:{
+                fontSize:15,
+                fontFamily:'monospace'
+            }
+        },
+        {
+            start:37.5,
+            end:50,
+            fillerColor: new echarts.graphic.LinearGradient(1, 0, 0, 0, [{  
+               //给颜色设置渐变色 前面4个参数，给第一个设置1，第四个设置0 ，就是水平渐变  
+               //给第一个设置0，第四个设置1，就是垂直渐变  
+               offset: 0,  
+               color: '#A5D6A7'  
+            }, 
+            {
+                offset:0.5,
+                color:'white'
+            },
+            {  
+               offset: 1,  
+               color: '#EF9A9A'  
+            }]),  
+            zoomOnMouseWheel:true,                   
+            moveOnMouseMove:true,  
+            left:"22%",
+            id: 'dataZoomY',
+            type: 'slider',
+            handleSize: '75%',
+
+            //shadowColor: 'rgba(0, 0, 0, 0.5)',
+            //shadowBlur: 10,
+            //showDetail:true,
+            handleIcon: 'M10.7,11.9v-1.3H9.3v1.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4v1.3h1.3v-1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7V23h6.6V24.4z M13.3,19.6H6.7v-1.4h6.6V19.6z',
+            handleSize: '80%',
+            handleStyle: {
+                color: '#fff',
+                shadowBlur: 3,
+                shadowColor: 'rgba(0, 0, 0, 0.6)',
+                shadowOffsetX: 2,
+                shadowOffsetY: 2
+            },
+            yAxisIndex: [4,3,2,1,0],
+            filterMode: 'empty',
+            textStyle:{
+                fontSize:15,
+                fontFamily:'monospace'
+
+            }
+        }
+        ],
+
+        graphic:
+        {
+            type: 'group',
+            rotation: - Math.PI / 4,
+            bounding: 'raw',
+            right: 120,
+            top: 100,
+            z: 100,
+            children: [
+                {
+                    type: 'rect',
+                    left: 'center',
+                    top: 'center',
+                    z: 100,
+                    shape: {
+                        width: 600,
+                        height: 60
+                    },
+                    style: {
+                        fill: 'rgba(0,0,0,0.3)'
+                    }
+                },
+                {
+                    type: 'text',
+                    left: 'center',
+                    top: 'center',
+                    z: 100,
+                    style: {
+                        fill: '#fff',
+                        text: '  1000 * 1000  Vis ',
+                        font: 'bold 26px Microsoft YaHei'
+                    }
+                }
+            ]
+        },
+        series: [{
+            name: 'Pingmesh',
+            type: 'heatmap',
+            data: []
+        }
+        ]
+
+    },
+    options: [] 
+};;
+for (var n = 0; n < time.length; n++) {
+    option.baseOption.timeline.data.push('Timestamp : '+(n+1));
+    option.options.push({
+        title: {
+            show: true,
+            'text': '第' + (n + 1) + '个测试时间点：' + time[n] 
+        },
+        series:[
+        {
+            name: 'Pingmesh热力图',
+            type: 'heatmap',
+            data: data[n],
+            label: {
+                normal: {
+                    show: true,
+                    fontSize:0.1
+                }
+            },
+            itemStyle: {
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowColor: 'rgba(30,30,30,0.6)'
+                }
+            },
+        },
+        {   color:'black',
+            type:'effectScatter',
+
+            data: trick[n],
+            effectType:'ripple',
+            showEffectOn:'render',
+            coordinateSystem:'cartesian2d',
+            hoverAnimation: true,
+            rippleEffect: {
+                brushType: 'stroke',
+                scale: 10
+            },
+            symbolOffset:[0, '50%'],
+            zlevel:1        
+        }
+        ]
+    });
+}
+
+
+
+myChart.setOption(option, true);
+
+       </script>
+   </body>
+</html>
