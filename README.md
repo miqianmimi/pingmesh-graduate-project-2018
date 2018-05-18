@@ -401,11 +401,11 @@ open ping-vis.html
 ## 在大规模数据中心网络集群情况下的可视化情况：+ ZOOM 缩放条
 ![Big Scale Visualization](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/version16/version7.png)
 
-## 仿真网络（server,podset）出错问题实验：
+## 仿真网络出错（server,podset）实验：
 
 <div align="center">
-<img src="https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/version16/podset_fail.png" height="300" width="380" >
+<img src="https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/version16/podset_fail.png" height="250" width="380" >
 
-<img src="https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/version16/server_fail.png" height="300" width="380" >
+<img src="https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/version16/server_fail.png" height="250" width="380" >
 
- </div>
+</div>
