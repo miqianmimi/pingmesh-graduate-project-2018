@@ -372,18 +372,40 @@ open ping-vis.html
 
 13.网络监测系统GUI界面（待做）
 
-14.不同时间点下TCP/IP热力图可视化(I)时序图
+14.不同时间点下TCP/IP热力图可视化(I)时序图 ✅
 
-15.不同时间点下TCP/IP条形图可视化(II)时序图
+15.不同时间点下TCP/IP条形图可视化(II)时序图 ✅
 
 16.RDMA和TCP/IP不同的可视化效果对比图（待做）
 
 17.RDMA网络下时序图产生的特殊点orPattern分析图（待做）
 
-18.大规模数据中心仿真实验的可视化新结果(I) (待做）
+18.大规模数据中心仿真实验的可视化新结果(I) ✅
 
-19.大规模数据中心仿真实验的可视化新结果(II) (待做）
+19.大规模数据中心仿真实验的可视化新结果(II) ✅
 
 20.【我分别在网络空载的情况下和网络负载的情况下进行我的实验，对得出的Pattern进行分析】（待做）
 
+### 2018/05/18:
 
+| Series | Done | 
+| :--- | :---- | 
+| 1 | 论文参考文献修订	|
+| 2 | 大规模数据生成 |
+| 3 | 去除labelshow数字点标成为单纯图 |
+| 4 | 添加slider滑动轴 |
+| 5 | 构造论文中的TOR出错情况 |
+
+[✅python 正态分布随机数](https://www.zhihu.com/question/39823283)
+
+## 在大规模数据中心网络集群情况下的可视化情况：+ ZOOM 缩放条
+![Big Scale Visualization](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/version16/version7.png)
+
+## 仿真网络（server,podset）出错问题实验：
+
+<div align="center">
+<img src="https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/version16/podset_fail.png" height="300" width="380" >
+
+<img src="https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/version16/server_fail.png" height="300" width="380" >
+
+ </div>
