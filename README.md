@@ -409,3 +409,11 @@ open ping-vis.html
 <img src="https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/version16/server_fail.png" height="250" width="380" >
 
 </div>
+
+
+当数据规模上1000x1000
+呈现完整的图会非常的慢，由于计算力有限
+现在想到的方法是：
+1.以SPINE为单位求均值的图
+2.开10个屏幕，每个屏幕展现100x100界面，但分别是0-100 server Ping 0-100 server,100-200 server Ping 100-200 server,...以此类推
+若一个server坏了，这10个里必能检测到。
