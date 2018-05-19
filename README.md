@@ -420,4 +420,3 @@ open ping-vis.html
 
 2.开10个屏幕，每个屏幕展现100x100界面，但分别是0-100 server Ping 0-100 server,100-200 server Ping 100-200 server,...以此类推
 若一个server坏了，这10个里必能检测到。
-![8个窗口监控1000x1000DC](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/version16/1000XX1000.png)
