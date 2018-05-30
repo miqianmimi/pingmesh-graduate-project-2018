@@ -434,3 +434,15 @@ open ping-vis.html
 | :--- | :---- | 
 | 1 | 初步界面设计	|
 
+![Pingmesh](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/version17/PingMesh.png)
+### 2018/05/29:
+
+| Series | Done | 
+| :--- | :---- | 
+| 1 | 添加tkinter界面	|
+| 2 | 添加button清除后不同效果	|
+| 3 | 添加一个时间stamp的选项	|
+| 4 | 添加一个RDMA or TCP/IP的选择 |
+| 5 | 添加一个不断得PING，实时读取数据 |
+
+(✅python登录那个ssh)[http://www.cnblogs.com/hushaojun/p/4607514.html]
