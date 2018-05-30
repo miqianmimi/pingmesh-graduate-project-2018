@@ -434,7 +434,11 @@ open ping-vis.html
 | :--- | :---- | 
 | 1 | 初步界面设计	|
 
-![Pingmesh](https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/version17/PingMesh.png)
+<div align="center">
+<img src="https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/version17/PingMesh.png" height="100" width="250" >
+</div>
+
+
 ### 2018/05/29:
 
 | Series | Done | 
