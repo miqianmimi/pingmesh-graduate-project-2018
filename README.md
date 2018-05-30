@@ -435,7 +435,7 @@ open ping-vis.html
 | 1 | 初步界面设计	|
 
 <div align="center">
-<img src="https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/version17/PingMesh.png" height="100" width="250" >
+<img src="https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/version17/PingMesh.png" height="250" width="100" >
 </div>
 
 
