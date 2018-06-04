@@ -456,5 +456,5 @@ open ping-vis.html
 
 ### Interface
 <div align="center">
-<img src="https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/version17/interface.png" height="300" width="150" >
+<img src="https://github.com/miqianmimi/pingmesh-graduate-project-2018/blob/master/agent-con-dsa/version17/interface.png" >
 </div>
